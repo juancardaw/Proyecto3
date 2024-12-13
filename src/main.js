@@ -1,6 +1,6 @@
 import './style.css';
 import Header from "../components/Header/Header";
-import Main from "../components/Main/Main";
+import Main from "../../components/Main/Main";
 import Footer from "../components/Footer/Footer";
 
  //Con este comando lo que hacemso es que la clave del printerest no se vea para el publico, ocultando. Lo que hacemso es añadir un archivo .env y poner los parametros y la clave que aparecen en ese archivo. Despues lo importamos aqui y lo ponemos en el enlace de la web mas abajo despues del client_id
