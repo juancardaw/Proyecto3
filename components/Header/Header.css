@@ -11,7 +11,7 @@ header > h1 {
     letter-spacing: 1.5px;
 }
 
-header > input, header > button {
+header > input, header > button, header > select {
     border: 2px solid black;
     border-radius: 10px;
     padding: 6px 10px;
@@ -20,7 +20,7 @@ header > input, header > button {
     box-shadow: 1px 1px 0px 0px black;
 }
 
-header > input:hover, header > button:hover{
+header > input:hover, header > button:hover, header > select:hover{
     border: 2px solid orange;
     box-shadow: 1px 1px 0px 0px orange;
 }

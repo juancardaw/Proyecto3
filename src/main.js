@@ -13,8 +13,8 @@ const buildWebsite = () => {
   getPhotos("dogs"); //Palabra clave para que pinte fotos
 };
 
-const getPhotos = async (keyword) => {
-  const data = await fetch(`https://api.unsplash.com/search/photos?page=1&query=${keyword}&per_page=20&client_id=${CLIENT_ID}`
+const getPhotos = async (keyword, photoNum = 10) => {
+  const data = await fetch(`https://api.unsplash.com/search/photos?page=1&query=${keyword}&per_page=${photoNum}&client_id=${CLIENT_ID}`
   );
 
   const results = await data.json();
@@ -47,7 +47,7 @@ buildWebsite();
 
 
 document.querySelector("#searchBtn").addEventListener("click", () => {
-  const value = document.querySelector("#searchInput").value
-  getPhotos(value);
-  document.querySelector("#searchInput").value = "";
+  const value = document.querySelector("#searchInput").value;
+  const photoNumValue = document.querySelector("#countInput").value
+  getPhotos(value, photoNumValue);
 });
