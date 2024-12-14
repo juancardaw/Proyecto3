@@ -1,7 +1,7 @@
 import "./Footer.css";
 
 const template = () => `
-<p>Copyringht 2024 - Pinterest</p>
+<p>Copyright 2025 - Pinterest JuanCar DAW</p>
 `;
 
 const Footer = () => {
