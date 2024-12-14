@@ -13,8 +13,8 @@ const buildWebsite = () => {
   getPhotos("dogs"); //Palabra clave para que pinte fotos
 };
 
-const getPhotos = async (keyword, photoNum = 10) => {
-  const data = await fetch(`https://api.unsplash.com/search/photos?page=1&query=${keyword}&per_page=${photoNum}&client_id=${CLIENT_ID}`
+const getPhotos = async (keyword, photoNum = 10, order = 'lastest') => {
+  const data = await fetch(`https://api.unsplash.com/search/photos?page=1&query=${keyword}&per_page=${photoNum}&order_by=${order}&client_id=${CLIENT_ID}`
   );
 
   const results = await data.json();
@@ -48,6 +48,17 @@ buildWebsite();
 
 document.querySelector("#searchBtn").addEventListener("click", () => {
   const value = document.querySelector("#searchInput").value;
-  const photoNumValue = document.querySelector("#countInput").value
-  getPhotos(value, photoNumValue);
+  const photoNumValue = document.querySelector("#countInput").value;
+  const orderPag = document.querySelector("#orderPag").value;
+  getPhotos(value, photoNumValue, orderPag);
+});
+
+//Este es el evento para que con el boton del "enter" podamos tambien hacer la busqueda
+document.querySelector("#searchInput").addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    const value = document.querySelector("#searchInput").value;
+    const photoNumValue = document.querySelector("#countInput").value;
+    const orderPag = document.querySelector("#orderPag").value;
+    getPhotos(value, photoNumValue, orderPag);
+  }
 });
