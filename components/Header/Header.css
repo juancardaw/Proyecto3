@@ -4,23 +4,48 @@ header {
     gap: 20px;
     align-items: center;
     border-bottom: 2px solid black;
-}
-
-header > h1 {
+  }
+  
+  header > h1 {
     text-transform: uppercase;
     letter-spacing: 1.5px;
-}
-
-header > input, header > button, header > select {
+  }
+  
+  header > input, header > button, header > select {
     border: 2px solid black;
     border-radius: 10px;
     padding: 6px 10px;
     background-color: transparent;
     font-weight: 500;
     box-shadow: 1px 1px 0px 0px black;
-}
+  }
+   
+  header > input:hover, header > button:hover, header > select:hover {
+    border: 2px solid red;
+    box-shadow: 1px 1px 0px 0px red;
+  }
+  
+  body.night header {
+    border-bottom: 2px solid white; 
+  }
+  
+  body.night header > h1 {
+    color: white;  
+  }
+  
+  body.night header > input, body.night header > button, body.night header > select {
+    border: 2px solid white;  
+    color: white; 
+    box-shadow: 1px 1px 0px 0px white;  
+    background-color: transparent;
+  }
 
-header > input:hover, header > button:hover, header > select:hover{
-    border: 2px solid orange;
-    box-shadow: 1px 1px 0px 0px orange;
-}
+  body.night header > select > option {
+    color: black;
+  }
+  
+  body.night header > input:hover, body.night header > button:hover, body.night header > select:hover {
+    border: 2px solid red;
+    box-shadow: 1px 1px 0px 0px red;
+  }
+  

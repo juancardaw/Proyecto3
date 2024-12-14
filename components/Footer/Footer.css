@@ -8,3 +8,7 @@ footer > p {
     letter-spacing: 1.5px;
     font-weight: 500;
 }
+
+body.night footer {
+    border-top: 2px solid white;
+  }

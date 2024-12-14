@@ -62,3 +62,20 @@ document.querySelector("#searchInput").addEventListener("keydown", (event) => {
     getPhotos(value, photoNumValue, orderPag);
   }
 });
+
+//Esto es para poner el modo noche o modo dia
+document.addEventListener('DOMContentLoaded', () => {
+  const themeToggle = document.getElementById('themeToggle');
+  const savedTheme = localStorage.getItem('theme');
+
+  if (savedTheme === 'night') {
+    document.body.classList.add('night');
+    themeToggle.textContent = 'Cambiar a Modo Día';
+  }
+
+  themeToggle.addEventListener('click', () => {
+    const isNight = document.body.classList.toggle('night');
+    themeToggle.textContent = isNight ? 'Cambiar a Modo Día' : 'Cambiar a Modo Noche';
+    localStorage.setItem('theme', isNight ? 'night' : 'day');
+  });
+});

@@ -13,3 +13,27 @@ ul {
   list-style: none;
 }
 
+body {
+  background-color: white;
+  color: black;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.night {
+  background-color: #121212;
+  color: white;
+}
+
+#results img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#results img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
