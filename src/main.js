@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   themeToggle.addEventListener('click', () => {
     const isNight = document.body.classList.toggle('night');
-    themeToggle.textContent = isNight ? 'Cambiar a Modo Día' : 'Cambiar a Modo Noche';
+    themeToggle.textContent = isNight ? 'Modo Día' : 'Modo Noche';
     localStorage.setItem('theme', isNight ? 'night' : 'day');
   });
 });

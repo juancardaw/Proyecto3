@@ -49,3 +49,10 @@ header {
     box-shadow: 1px 1px 0px 0px red;
   }
   
+  header > input::placeholder{
+    color: rgb(39, 39, 39);
+  }
+  
+  body.night header > input::placeholder{
+    color: rgb(188, 187, 187);
+  }
