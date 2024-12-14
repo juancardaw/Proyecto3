@@ -3,6 +3,7 @@ header {
     display: flex;
     gap: 20px;
     align-items: center;
+    justify-content:center;
     border-bottom: 2px solid black;
   }
   
@@ -56,3 +57,11 @@ header {
   body.night header > input::placeholder{
     color: rgb(188, 187, 187);
   }
+
+  /*Descubro como cambiar el tamaño del emoji*/
+  header > button#themeToggle {
+    border: none;
+    box-shadow: none;
+    font-size: 20px;
+  }
+

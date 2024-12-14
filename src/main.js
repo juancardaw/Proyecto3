@@ -70,12 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (savedTheme === 'night') {
     document.body.classList.add('night');
-    themeToggle.textContent = 'Cambiar a Modo Día';
+    themeToggle.textContent = '🌞';
   }
 
   themeToggle.addEventListener('click', () => {
     const isNight = document.body.classList.toggle('night');
-    themeToggle.textContent = isNight ? 'Modo Día' : 'Modo Noche';
+    themeToggle.textContent = isNight ? '🌞' : '🌛';
     localStorage.setItem('theme', isNight ? 'night' : 'day');
   });
 });

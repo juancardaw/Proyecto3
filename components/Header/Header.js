@@ -18,7 +18,7 @@ const template = () => `
 </select>
 
 <button id="searchBtn">Search</button>
-<button id="themeToggle">Cambiar a Modo Noche</button>
+<button id="themeToggle">🌛</button>
 
 `;
 
